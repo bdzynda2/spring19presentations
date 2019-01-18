@@ -1,0 +1,108 @@
+---
+title: "Acct 692 Class 1"
+author: "David Zynda"
+date: "January 17, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Ball and Brown 1968
+
+### Overview
+
++ Old Theories were normative rather than positive
++ Points out that more information (thereby earnings) should cause adjustment in security prices based on efficient market hypothesis
++ Build two models of what market expects firm's income to be and then investigates the market's reaction when expectations prove false. 
+
+
+### Test and Hypothesis
+
+__Hypothesis__: _If, as the evidence indicates, security prices do in fact adjust rapidly to new information as it becomes available, then changes in security prices will reflect the flow of information to the market. An observed revision of stock prices associated with the release of the income report would thus provide evidence that the information reflectd in income numbers is useful._
+
+Perhaps new information is contained in the difference between actual change in income and conditional expectation. Not all this difference maybe new, but could be from some other financing and policy. 
+
+Use two models:
+
+$$\Delta I_{j, t-1} = \hat{\alpha}_{1jt} + \hat{\alpha}_{2jt} \Delta M_{j, t-r} + \hat{u}_{j, t-r}$$
+
+where $\Delta I$ is change in Income. 
+ + $j$ is the firm
+ + $t-r$ is today $t$ less $r$ days (in paper is $\tau = 1, ..., t-1$)
+ + $\Delta M$ is market income
+
+Then, between the data and the estimates, we can compute residual unexpected income change or forecast error:
+
+$$\hat{u}_{jt} = \Delta I_{jt}- \Delta \hat{I}_{jt}$$
+
+There is also one more model that looks at return more broadly. 
+
+$$[PR_{jm} -1] = \hat{b}_{1j} + \hat{b}_{2j}[L_m -1] + \hat{v}_{jm}$$
+
+ + $PR$ is the monthly price relative to stock $j$ in month $m$
+    + This is defined in footnote 10 on page 162 as "dividends plus closing price divided by opening price"
+ + $L_m$ is some kind of investment performance index for the market
+ + $\hat{v}$ will be stock return residual that represents new information
+ 
+Also, they make a naive model which predicts that income will be the same for this year as for last. Forecast error is change in income since the previous year. 
+ 
+Econometrics may be a bit spotty. Leave out industry effects because they claim it is small, about 10% for model 1 and 2. Correlation in model 2 between market returns and firm returns. Probably autocorrelated returns too. 
+
+
+If forecast error is negative $\implies$ bad news and vice versa
+
+### Data
+
+Income numbers from Compustat. A quarter of variability from income explained by market. Data show no strong presence of autocorrelation. Used WSJ reports for forecast, preliminary, and year end reports. Stock prices from CRSP.
+
+Firms included if:
+
+(1) earnings data available on Compustat
+(2) Fiscal year end is Dec 31
+(3) Price data in CRSP for at least 100 months
+(4) WSJ announcement dates available
+
+Dates of data 1957 - 1965. Data does not include young firms, failed firms, or ones not in criteria above. Generality of results maybe compromised. 
+
+### Results
+
+__Abnormal Performance Index__
+
+$$API_M = \frac{1}{N}\sum^N_n \prod_{m=-11}^M (1 + v_{nm})$$
+
+Traces value of one dollar invested in all securities $n$ at the end of month -12 (then holding period -11, -10, ..., $T$)
+
+Figure 1 employs three portfolios for EPS, Income, and EPS in model 3 (naive) for firms with positive returns, and also negative returns separately. 
+
+Information is "useful" when actual income differs from expected income. Most info is anticipated before report is released. 
+
+For robustness, used EBIT and net income before nonrecurring items. Neither was as successful as income and EPS. 
+
+For variable 3, relationship between sign of forecast error and stock return residual persisted for two months. The explanations are one page 173. Market income unknown until all firms announced. Random errors in announcement data. Prelim reports not perceived by market as final. 
+
+Finally, of the 25% of all information "persisting" (50% persisting and not), half is associated with reported income. 10-15% of that not anticipated by the month of the report. And, value of that info is 20% of all info coming in that month. This seems strange, given 50% is attributed to half of all info. Could be other bits of info are released, info already reflected in security prices, timing of report being one and a half months into history. 
+
+### Questions for consideration
+
+How has proliferation of data affected these results since? Do we expect greater efficiency? Are there limits to arbitrage? Are income statements still a dominant form of knowledge?
+
+Some empirical considerations were made and shrugged off. Are we right in so doing?
+
+Could we use classifiers and novel approaches? 
+
+
+
+## Beaver, Clarke, Wright 1979
+
+This is concerned with building on the last article, but also taking into account the magnitude of forecast error and not just signs. Does so by examining variety of correlations with both unexplained returns and forecast errors. 
+
+
+
+
+
+
+
+
+

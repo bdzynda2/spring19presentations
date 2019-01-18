@@ -1,0 +1,119 @@
+---
+title: "How Constraining are Limits to Arbitrage?"
+author: "Ljungqvist and Qian"
+date: "January 22, 2019"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
++ Documents how small scale short-sellers overcome limits to arbitrage such as:
+    + High shorting fees
+    + few stocks available for borrowing
+    + "Shallow pockets"
+  
++ Proliferation of expensive (negative) information by arbitrageurs helps overcome their limits to arbitrage
++ Arbitrageurs use large sell-off of by those in long positions to profit from price discovery in wake of bad news
+
+## Motivation and Contribution
+
++ How constraints affect mispricing and arbitrage 
++ How short sellers produce and transmit information
++ Economic importance of even small arbitrageurs
+
+## Main Research Question and Hypothesis
+
+_How do, in wake of steep constraints, small scale short sellars effectuate arbitrage?_ 
+
+Rather, do big barriers to trading limit arbitrage? 
+
+__Claim__: To counteract risk of trading against overvalued stocks where margin calls loom, small shorts which cannot exert downward pressure on prices, and time, the "arbs" share their signal with the market to reduce their exposure and let the unwinding long positions do the work. 
+
+_"Arbs attempt to circumvent these constraints by making their information public, in an effort to persuade the longs to sell"_
+
+## Main Research Question and Hypothesis
+
+Need to test and examine:
+
+(1) Impact of arbs information/signals in reports - how does market respond initially?
+(2) Who is responsible for increased trading after a report is released?
+(3) Credibility of reports - do the declines in price remain for long?
+
+
+
+## Related Literature
+
+
+
+## Primary Methodology and Tests
+
++ Identify short sellers who:
+    + Target allegedly overvalued companies 
+    + Are not casual bloggers
+    + Are not large hedge funds who restrict access to information
+    
++ Such arbs look for overvalued companies of average size with good trading volume, liquidity, and higher analyst ratings. In general, shorting fees are high, not a lot of lendable stock, put options costly and high volatility
+    + Then, they conduct thorough and costly investigation
+
++ Most reports following investigation contain new information
+
+
+
+## Primary Methodology and Tests
+
++ Assess impact of reports using Fama-French / momentum four-factor (and DGTW) cumulative abnormal returns in event time
++ After report, investors respond quickly in equity markets as prices fall by average of 7.51%
+    + Suggest relevant and novel information
+    + Prices continue to fall over next three months
+    + SEC filing views increase 80% in one day
+    + Trading activity increases 339% on release day
+    
+## Primary Methodology and Tests
+
+Who is responsible for increased trading?
+
++ 0.45% of outstanding shares are newly shorted on day before report release (ANcerno and DataExplorers)
+    + Cannot be responsible for large trade increase
+    + After release, there is drastic increase in cost of shorting, and lendable stock supply falls
++ Options traders cannot arbitrage this information either
+    + Implied put-option volatility remains significantly high after release, and put-call parity is high
+        + So, its hard to get in and make much here, like it is hard to short sell
+        
+## Primary Methodology and Tests
+
+Test Reaction of Long Investors
+
++ Disaggregate Trading Volume
+    + Long volume = one-way volume - new shorts
+    + Day following report shows massive increase of 524% of long volume
+  
++ Used ANcerno data and separate aggregate selling and buying
+    + Find ANcerno institutions seven times more active post report
+    + All sells and no buys for these institutions
++ Also isolate target company in ANcerno data to see institution's holdings
+    + ANcerno institutions sell average of 43% of target company on report release day
+    + 65% of target's long investors are net sellers on report day
+    
+## Primary Methodology and Tests
+
+Is information credible?
+
++ SEC filings and Factiva show 69% of target companies face class-action lawsuits, half are delisted, and over a third (36%) investigated by SEC or DoJ. 
+
++ 92% of targets change management, 47% have auditor turnover, and 23% restate earnings
+
+Also construct measure of credibility by measuring track record of arb's CARs 3 months before and separating those who had positive vs negative profits
++ Use simple difference in means test to show more credible group had significant returns $(p < 0.001)$, while less credible group was not significantly different than zero
++ Shorting fees also significantly greater for credible group, and not so otherwise
++ New evidence also significantly more valued than "opinion"
+
+__Is is lasting__
+
+## Other thoughts and extenstions
+
+An interesting study, though seemingly small
+"Arbitraged away"
