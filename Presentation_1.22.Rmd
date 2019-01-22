@@ -2,7 +2,9 @@
 title: "How Constraining are Limits to Arbitrage?"
 author: "Ljungqvist and Qian"
 date: "January 22, 2019"
-output: beamer_presentation
+output:
+  ioslides_presentation: default
+  beamer_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -21,15 +23,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Motivation and Contribution
 
-+ How constraints affect mispricing and arbitrage 
++ How constraints affect mispricing and arbitrage (Getting around limits to arbitrage)
 + How short sellers produce and transmit information
 + Economic importance of even small arbitrageurs
 
 ## Main Research Question and Hypothesis
 
-_How do, in wake of steep constraints, small scale short sellars effectuate arbitrage?_ 
-
-Rather, do big barriers to trading limit arbitrage? 
+_How do, in wake of steep constraints, small scale short sellars effectuate arbitrage? Do big barriers to trading limit arbitrage?_ 
 
 __Claim__: To counteract risk of trading against overvalued stocks where margin calls loom, small shorts which cannot exert downward pressure on prices, and time, the "arbs" share their signal with the market to reduce their exposure and let the unwinding long positions do the work. 
 
@@ -47,19 +47,53 @@ Need to test and examine:
 
 ## Related Literature
 
+Fits into greater Limits to Arbitrage literature, and more specifically evidence against it. 
+
++ Short selling constraints: DeLong, B., A.Shleifer, L.Summers, and R. Waldmann (1990)
+    + Noise trader risk: potential for shorted stocks to increase in price and create ruinous margin calls
++ Benefits of advertising arbitrage: Kovbasyuk, S., and M. Pagano. 2014. Advertising arbitrage. Working Paper
+    + In line with idea that promulgation of arbitrage opportunities might be good
 
 
-## Primary Methodology and Tests
+
+
+
+## Data
 
 + Identify short sellers who:
     + Target allegedly overvalued companies 
     + Are not casual bloggers
     + Are not large hedge funds who restrict access to information
++ Total of 31 arbs
+    + Earliest Firm founded in 1992, and most prolific ones include Citron and Muddy Waters
+    + Little knowledge available due to private ownership
     
-+ Such arbs look for overvalued companies of average size with good trading volume, liquidity, and higher analyst ratings. In general, shorting fees are high, not a lot of lendable stock, put options costly and high volatility
-    + Then, they conduct thorough and costly investigation
+    
+    
+    
+## Data 
 
-+ Most reports following investigation contain new information
+
+  + This paper avoids bias by collecting every target firm of all 31 short sellers. 
+  + 401 reports from 2006 to 2011 - only use 358 
+  + 124 targeted listed companies come from these reports - remaining are follow-ups
+    
+After targeting, average abnormal return from 14 "first time" firms is -9.5% with 28.3% mean CAR profit for roughly 3 months.
+
+
+## Data
+
++ Firms tend to be midsize growth stocks, in 70th percentile for turnover and 44th percentile for illiquidity. 
++ Shorting fees are high - in nearly 75th percentile
++ Not very lendable - only about 5%
++ Expensive put options
++ High idiosyncratic volatility (76th percentile)
++ Analysts' ratings were "buy" or "strong buy"
+Not the kind of stock one would normally want to short!
+
+    
+
+Short sellars spend a lot of time and resouces investigating targets
 
 
 
@@ -106,14 +140,29 @@ Is information credible?
 
 + 92% of targets change management, 47% have auditor turnover, and 23% restate earnings
 
+
+## Primary Methodology and Tests
+
 Also construct measure of credibility by measuring track record of arb's CARs 3 months before and separating those who had positive vs negative profits
+
 + Use simple difference in means test to show more credible group had significant returns $(p < 0.001)$, while less credible group was not significantly different than zero
 + Shorting fees also significantly greater for credible group, and not so otherwise
 + New evidence also significantly more valued than "opinion"
 
-__Is is lasting__
 
-## Other thoughts and extenstions
 
-An interesting study, though seemingly small
-"Arbitraged away"
+## Conclusion
+
++ Small Arbitrageurs can make a difference and help make markets great again (efficient)
++ Arbs use information to get long positions to unfold, thus winning on their short positions
++ Not just a knee-jerk reaction, but credible and lasting information 
++ If mispricing of assets is large, barriers can be overcome 
++ Short sellers can be a valuable part of market process, and not just manipulators
+
+## Other thoughts and extensions
+
+(1) An interesting study, though seemingly small sample - does it command attention, or is it just an interesting weekend read? Is it large enough to make the theoretical limit to arbitrage scholar shudder?
+
+(2) How valuable is the greater literature on these topics? Life seems short for arbitrage opportunities
+
+
